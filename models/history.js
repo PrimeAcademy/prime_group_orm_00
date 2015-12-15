@@ -8,6 +8,7 @@ var Talent = require('./talent');
 var History = Bookshelf.Model.extend({
   tableName: 'history',
   hasTimeStamps: 'true',
+  idAttribute: 'history_id',
   talent: function() {
     return this.belongsTo(Talent, 'talent_id');
   }
